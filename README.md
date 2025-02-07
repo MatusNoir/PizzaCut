@@ -14,32 +14,24 @@
 
 そこで, 扇形の一方の辺と弧を通る直線で, かつ, もう一方の辺と平行な直線 $l$ による二等分を考える.
 扇形の面積 $S$ は,
-$$
-S = \frac12 r^2 \theta
-$$
+$$S = \frac12 r^2 \theta$$
 である.
 
 直線 $l$ は一方の辺上の中心から $x$ cmの点を通り扇形を切り分ける.
 このとき, 直線 $l$ と扇形の弧の交点がなす角を $\phi$ とする. このとき,
-$$
-x = \frac{\sin\phi}{\sin\theta}r
-$$
+$$x = \frac{\sin\phi}{\sin\theta}r$$
 が成り立つ.
 
 扇形の中心を含む領域の面積を $S_{1}$, 含まない領域の面積を $S_2$ とすると, 以下のように求められる.
-$$
-\begin{aligned}
+$$\begin{aligned}
 S_1 &= \frac{r^2}{2}(\theta - \phi) - \frac12 (r \cos\phi - x \cos\theta)x\sin\theta \\
 &= \frac{S}{2} \\
 S_2 &= S - S_1 \\
-\end{aligned}
-$$
+\end{aligned}$$
 
 この等式は解析的に解くことができないため, 数値計算および最適化を用いることが妥当だと思われる.
 ここで, 未知の変数 $\phi$ について, 変数 $x$ と $\sin$ の逆関数である $\arcsin$ を用いて以下のように表せる.
-$$
-x = \frac{\sin\phi}{\sin\theta}r \Leftrightarrow \phi = \arcsin(\frac{x}{r}\sin\theta)
-$$
+$$x = \frac{\sin\phi}{\sin\theta}r \Leftrightarrow \phi = \arcsin(\frac{x}{r}\sin\theta)$$
 
 $0 < x < r \space (x \in \mathbb{N})$ について, $S_1$ と $S_2$ の差分を求めた.
 $r=10, \theta = \frac{\pi}{3}$ のとき, $x=3$ で面積の差が最小であった.
